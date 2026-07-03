@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.navSection {
+  height:70px;
+  display:flex;
+  justify-content: space-between;
+  background: rgb(221, 73, 19);
+  align-items: center;
+  color:white;
+  padding:0 30px;
+  font-size:"medium";
+}
+.sideBarSection{
+  border:1px solid red;
+  width:100%;
+  max-width:15%;
+  height:90vh;
+  padding-top:10px;
+  background-color:rgb(243, 240, 240);
+
+}
+
+.sideBarSection ul li {
+  list-style: none;
+  margin-bottom:20px;
+  font-weight:550;
+  font-size:medium;
+  cursor: pointer;
+
+}
+
+.collectionSection
+{
+  display: flex;
+
+
+}
+.loginSection {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.authForm
+{
+  width:100%;
+  max-width:50%;
+  border:1px solid red;
+  margin-top:-230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border:2px solid rgb(214, 205, 205)
+ 
+}
+.authForm input{
+  width:100%;
+  max-width:55%;
+  height: 23px;
+}
+.btnSubmit
+{
+  border:none;
+  color:black;
+  background-color: orangered;
+  border-radius: 2px;
+  padding:10px;
+  margin:20px;
+  font-weight: 800;
+  font-size:15px;
+
+}
+.registerSection
+{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.authForm label
+{
+  width:100%;
+  max-width :55%;
+  font-weight: 400;
+
+}
+
+.firmSection
+{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border:1px solid red;
+}
+.tableForm
+{
+    border:1px solid red;
+    width:100%;
+  max-width:50%;
+  border:1px solid red;
+  margin-top:-100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border:2px solid rgb(214, 205, 205)
+
+
+}
+.tableForm input{
+  width:100%;
+  max-width:55%;
+  height: 20px;
+    max-width :85%;
+      margin-bottom:10px;
+
+
+}
+.tableForm label
+{
+  width:100%;
+  max-width:85%;
+  font-weight: 600;
+
+  
+}
+.productSection
+{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.checkInp
+{
+  width:100%;
+  max-width:90%;
+  display: flex;
+
+
+}
+.checkInp label
+{
+  width:30%;
+  margin-left:9px;
+}
+
+.inputsContainer
+{
+    width:100%;
+    max-width:80%;
+    display: flex;
+}
+.checkboxContainer
+{
+      display: flex;
+
+
+}
+.checkboxContainer input{
+}
+.checkboxContainer label{
+  width: 100px;
+  display: flex;
+  font-size:11px;
+
+}

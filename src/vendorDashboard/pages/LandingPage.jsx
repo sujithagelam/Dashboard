@@ -45,7 +45,11 @@ const LandingPage = () => {
     }
 
   },[])
-
+const loginSuccessHandler = () => {
+    setshowLogout(true);
+    setShowwelcome(true);
+    setShowLogin(false);
+};
   const showLoginHandler = () => {
     setShowLogin(true);
     setShowRegister(false);
@@ -145,7 +149,7 @@ const LandingPage = () => {
             showAllProductsHandler={showAllProductsHandler}
             showFrimTitle={showFrimTitle}
           />
-          {showLogin && <Login showWelcomeHandler={showWelcomeHandler} />}
+          {showLogin && <Login showWelcomeHandler={showWelcomeHandler}  loginSuccessHandler={loginSuccessHandler}/>}
           {showRegister && <Register showLoginHandler={showLoginHandler} />}
           {showFirm  && showLogout  && <AddFirm />}
           {showProduct && showLogout &&  <AddProduct />}

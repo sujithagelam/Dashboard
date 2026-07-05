@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { API_URL } from "../../data/apiPath";
 
-const Login = ({ showWelcomeHandler }) => {
+const Login = ({ showWelcomeHandler,loginSuccessHandler }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const loginHandler = async (e) => {
@@ -19,6 +19,7 @@ const Login = ({ showWelcomeHandler }) => {
       if (response.ok) {
         alert("login success");
         localStorage.setItem("loginToken", data.token);
+        loginSuccessHandler();
         setEmail("");
         setPassword("");
         showWelcomeHandler();
@@ -38,7 +39,7 @@ const Login = ({ showWelcomeHandler }) => {
         console.log("checking for firmid", vendorFirmId);
         localStorage.setItem('firmId',vendorFirmId);
         localStorage.setItem('firmName',vendorFirmName);
-         window.location.reload()
+        window.location.reload()
       }
     } catch (error) {
       console.error(error);

@@ -5,7 +5,7 @@ import Login from "../components/forms/Login";
 import Register from "../components/forms/Register";
 import AddFirm from "../components/forms/AddFirm";
 import AddProduct from "../components/forms/AddProduct";
-import Welcome from "../components/welcome";
+
 import { useState,useEffect } from "react";
 import AllProduct from "../components/AllProduct";
 

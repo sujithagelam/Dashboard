@@ -66,6 +66,10 @@ const AddFirm = () => {
         setRegion([]);
         setFoffer("");
         setFile(null);
+      } else if (data.message == "vendor can have only frim") {
+        alert("Firm exists only on firm adde");
+      } else {
+        alert("failed to add firm");
       }
       console.log(data.firmId);
       const firmId = data.firmId;

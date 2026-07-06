@@ -149,11 +149,11 @@ const loginSuccessHandler = () => {
             showAllProductsHandler={showAllProductsHandler}
             showFrimTitle={showFrimTitle}
           />
-          {showLogin && <Login showWelcomeHandler={showWelcomeHandler}  loginSuccessHandler={loginSuccessHandler}/>}
+          {showLogin && <Login showWelcomeHandler={showWelcomeHandler} />}
           {showRegister && <Register showLoginHandler={showLoginHandler} />}
           {showFirm  && showLogout  && <AddFirm />}
           {showProduct && showLogout &&  <AddProduct />}
-          {showWelcome && <Welcome />}
+          {/* {showWelcome && <Welcome />} */}
           {showAllProducts && showLogout &&   <AllProduct />}
 
           {/* <Register /> */}

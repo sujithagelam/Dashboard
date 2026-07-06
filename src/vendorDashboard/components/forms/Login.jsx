@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { API_URL } from "../../data/apiPath";
 
-const Login = ({ showWelcomeHandler,loginSuccessHandler }) => {
+const Login = ({ showWelcomeHandler }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const loginHandler = async (e) => {
@@ -19,7 +19,6 @@ const Login = ({ showWelcomeHandler,loginSuccessHandler }) => {
       if (response.ok) {
         alert("login success");
         localStorage.setItem("loginToken", data.token);
-        loginSuccessHandler();
         setEmail("");
         setPassword("");
         showWelcomeHandler();
@@ -29,9 +28,20 @@ const Login = ({ showWelcomeHandler,loginSuccessHandler }) => {
       const vendorResponse = await fetch(
         `${API_URL}/vendor/single-vendor/${vendorId}`,
       );
-      const vendorData = await vendorResponse.json();
-      if (vendorResponse.ok) {
+     const vendorData = await vendorResponse.json();
 
+console.log("vendorResponse.status:", vendorResponse.status);
+console.log("vendorData:", vendorData);
+console.log("vendorData.vendor:", vendorData.vendor);
+console.log("vendorData.vendor?.firm:", vendorData.vendor?.firm);
+
+      if (vendorResponse.ok) {
+        if(!vendorData.vendor)
+        {
+          console.log("Vendor data",vendorData);
+          return;
+        }
+      
         const vendorFirmId = vendorData.vendorFirmId;
         const vendorFirmName = vendorData.vendor.firm[0].firstname;
         console.log("my firm name",vendorFirmName);
@@ -63,7 +73,6 @@ const Login = ({ showWelcomeHandler,loginSuccessHandler }) => {
         <input
           type="password"
           name="passsword"
-          value={password}
           onChange={(e) => setPassword(e.target.value)}
           value={password}
           placeholder="Enter you password"

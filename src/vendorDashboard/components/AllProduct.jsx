@@ -12,7 +12,7 @@ const AllProduct = () => {
       setProducts(newProductData.products);
       console.log(newProductData);
     } catch (err) {
-      console.log("failed to fetch products",error);
+      console.log("failed to fetch products",err);
       alert("failed to fetch produccts");
 
     }
@@ -20,6 +20,9 @@ const AllProduct = () => {
   useEffect(() => {
     productsHandler();
   },[]);
+  useEffect(() => {
+  console.log("Products updated:", products);
+}, [products]);
   const deleteProductById = async(productId)=>{
     console.log("delete button clicked",productId)
     try{
@@ -30,8 +33,9 @@ const AllProduct = () => {
        console.log("Response OK:", response.ok);
       if(response.ok)
       {
-        setProducts(products.filter(product=>product._id !== productId));
-                alert("Product delted sucesfully");
+setProducts((prevProducts) =>
+  prevProducts.filter((product) => product._id !== productId)
+);                alert("Product delted sucesfully");
 
         // confirm("are you sure you want to delete");
         // window.location.reload();
